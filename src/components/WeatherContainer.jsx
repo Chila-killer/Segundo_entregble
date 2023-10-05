@@ -34,7 +34,7 @@ const WeatherContainer = ({ weather, setWeather }) => {
   }
 
   return (
-    <main className={`h-screen grid items-center justify-center
+    <main className={`h-screen grid items-center justify-center grid-rows-[7]
     ${weatherDescription === "clear sky" ? 'bg-[url("/clearSky.jpg")]' :
         weatherDescription === "few clouds" ? 'bg-[url("/fewClouds.jpg")]' :
           weatherDescription === "scattered clouds" ? 'bg-[url("/scatteredClouds.jpg")]' :
@@ -57,7 +57,7 @@ const WeatherContainer = ({ weather, setWeather }) => {
       } bg-cover bg-center`}>
 
 
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center row-span-1">
         <div className="flex border border-[#4580BA] rounded">
           <input
             type="text"
@@ -72,7 +72,7 @@ const WeatherContainer = ({ weather, setWeather }) => {
       </div>
 
 
-      <section className="grid text-center w-screen gap-5 px-3 justify-center">
+      <section className="grid text-center w-screen gap-5 px-3 justify-center row-span-6">
         <h2 className="text-xl font-bold sm:text-3xl">{weather.name}, {weather.sys.country}</h2>
 
         <div className="grid gap-3 sm:grid-cols-[1fr_auto] mx-auto">
